@@ -1,0 +1,35 @@
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.conteiner{
+    margin:  217px auto;
+    max-width: 687px;
+    font-family: 'Roboto', sans-serif;
+    color: #40403F;
+    text-transform: uppercase;
+    text-align: center;
+}
+H1{
+    font-weight: 600;
+    font-size: 80px;
+    margin-top: 400px;
+    margin-bottom: 52px;
+}
+H2{
+    
+    font-weight: 500; 
+    font-size: 40px;
+    text-align: center;
+    margin-bottom:92px;
+}
+.line{
+    background-color: #40403F;
+    padding: 5px 217px;
+    margin-bottom:92px;
+}
+H3{
+    font-weight: 500;
+    font-size: 32px;
+}

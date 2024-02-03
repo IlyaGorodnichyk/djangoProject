@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="{% static 'main/css/normalize.css' %}">
+ <link  rel="stylesheet" href="{% static 'main/css/style.css' %}">
+  <title>Makeup and Hair</title>
+</head>
+<body>
+<header class="header">
+<div class="conteiner">
+  <nav class="nav">
+      <div class="address">
+        <img class="nav-img" src="{% static 'main/images/nav.svg' %}" alt="значек навигации">
+        <p>Брест, Ул. Куйбышева 9</p>
+      </div>
+      <div class="grafic">
+        <img class="time-img" src="{% static 'main/images/time.svg' %}" alt="значек часов">
+        <p>пн-вс с 8:00 до 21:00</p>
+      </div>
+    <!-- 
+      </li>
+    </ul>-->
+    <a class="logo">
+      <img class= "logo-img" src="{% static 'main/images/logo.svg'%}" alt="логотип сайта">
+    </a>
+    <div class ="number"> 
+      <img class= "phone-img" src="{% static 'main/images/phone.svg'%}" alt="лого телефона">
+      <a class="phone" href="tel:375336443931">+375 33 644 39-31</a>
+      <img class= "phone-img" src="{% static 'main/images/phone.svg'%}" alt="лого телефона">
+        <a class="phone2" href="tel:375336445555">+375 33 644 55-55</a>
+    </div>
+    </div>
+
+
+  </nav> 
+</div>
+</header>
+
+<header class="head-menu">
+  <div class="conteiner">
+  <nav class="nav">
+
+  </nav>
+</div>
+</header>
+
+
+<main class="main">
+  <section class="headline">
+    <div class="conteiner">
+    <img class= "brush" src="{% static 'main/images/brush.png'%}" alt="кисти">
+    <h3 class="logo-name">—MAKEUP AND HAIR</h3>
+    <h1 class="division">Мы воплощаем вашу 
+красоту в реальность</h1>  
+<p class="discount">Скидка 20% новым клиентам
+  на любую услугу при записи онлайн</p>
+
+        <div class="sign-up" id="open_sign_up">
+    <a  href="#">ЗАПИСАТСЯ</a>
+</div>
+
+<div class="sign_up_form" id="sign_up_form">
+  <div class="sing_up_container">
+      <div class="sign_up_body" id="sign_up_body">
+          <p class="record"> Записаться на прием</p>
+          <p class="description">Оставьте заявку и мы свяжемся с вами и уточним дату и время приема, а так же другие детали.  </p>
+          <form action="{% url 'thanks_page' %}" method="POST" id="form" name="form">
+              {% csrf_token %}
+              <div class="input-box">
+                  <input name="name" id ='name' placeholder="Имя" data-reg="^[А-ЯЁ][а-яё]*$">
+              <label for="name">Только русские буквы</label>
+              </div>
+               <div class="input-box">
+            <input name="phone" id ='phone' placeholder="Телефон" data-reg="^((\+3|3|8)+([0-9]){10})$">
+              <label for="phone">В формате: +375000000000, +375000000000, 80000000000</label>
+              </div>
+            <button id="button" name="button">отправить</button>
+          </form>
+          <div class="sign_up_close" id="sign_up_close">&#10006</div>
+      </div>
+    </div>
+  </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="conteiner">
+    <div class="footer-inner">
+      <img class= "logo-fot-img" src="{% static 'main/images/logo-footer.png'%}" alt="логотип сайта">
+
+      <a class="politic" href="#">Политика конфиденциальности </a>
+    </div>
+  </div>
+</footer>
+<script src="{% static 'main/js/main.js'%}"></script>
+</body>
+</html>
